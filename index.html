@@ -1,10 +1,131 @@
 <!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-  <title>祈芙的小屋</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yami的个人主页</title>
+    <style>
+        :root {
+            --bg: #f8f9fa;
+            --text: #2c3e50;
+            --card: #ffffff;
+            --accent: #ff6b6b;   /* 主色调，喜欢可换成 #e91e63、#4ecdc4 等 */
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #121212;
+                --text: #e0e0e0;
+                --card: #1e1e1e;
+            }
+        }
+
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card {
+            background: var(--card);
+            max-width: 420px;
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .card:hover { transform: translateY(-10px); }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 30px auto 10px;
+            object-fit: cover;
+            border: 5px solid var(--accent);
+        }
+        h1 {
+            font-size: 28px;
+            margin: 10px 0;
+            color: var(--accent);
+        }
+        .tagline {
+            color: #888;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .bio {
+            padding: 0 30px;
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            padding: 0 20px 30px;
+        }
+        .links a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .links a:hover {
+            transform: scale(1.08);
+            box-shadow: 0 5px 15px rgba(255,107,107,0.4);
+        }
+        .links a i { font-size: 18px; }
+
+        footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
+    <!-- 图标库（可选） -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <div>
-    <p>永远相信美好的事情即将发生</p>
-  </div>
-  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="https://music.163.com/outchain/player?type=2&id=1311345855&auto=1&height=66"></iframe>
+
+<div class="card">
+    <!-- 1. 替换成你的头像（放同目录下或用网络链接） -->
+    <img src="yami.jpg" alt="头像" class="avatar">
+    <!-- 或者本地图片：src="myphoto.jpg" -->
+
+    <h1>Yami</h1>
+    <p class="tagline">愿意相信美好的事情即将发生</p>
+
+    <div class="bio">
+        Hi～我是Yami，你可以在以下地方找到我<br>
+    </div>
+
+    <div class="links">
+        <!-- 直接改链接和图标就行 -->
+        <a href="https://bgm.tv/user/yami_0125" target="_blank">
+            <i class="fab fa-edge"></i> Bangumi
+        </a>
+        <a href="https://space.bilibili.com/610179543" target="_blank">
+            <i class="fab fa-bilibili"></i> bilibili
+        </a>
+    </div>
+</div>
+
+<footer></footer>
+
 </body>
+</html>
